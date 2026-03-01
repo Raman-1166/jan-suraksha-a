@@ -6,13 +6,13 @@ const cloudinary = require('../server/config/cloudinary');
 const formidable = require('formidable');
 const fs = require('fs');
 
-export const config = {
+module.exports.config = {
     api: {
         bodyParser: false,
     },
 };
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
     await connectDB();
 
     const { method } = req;
