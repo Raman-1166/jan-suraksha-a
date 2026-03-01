@@ -1,8 +1,8 @@
 require('dotenv').config();
 const connectDB = require('./lib/db');
 const Report = require('./lib/models/Report');
-const aiService = require('../server/services/aiService'); // Reuse existing AI service logic
-const cloudinary = require('../server/config/cloudinary');
+const aiService = require('./lib/aiService');
+const cloudinary = require('./lib/cloudinary');
 const formidable = require('formidable');
 const fs = require('fs');
 
