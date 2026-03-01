@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "source": "/uploads/(.*)",
+      "destination": "https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/v1/civic_reports/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/client/dist/$1"
+    }
+  ]
+}

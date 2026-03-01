@@ -32,7 +32,7 @@ const ReportingForm = () => {
 
         try {
             setError(null);
-            const response = await axios.post('http://localhost:5000/api/reports', formData);
+            const response = await axios.post('/api/reports', formData);
             setResult(response.data);
         } catch (error) {
             console.error('Error submitting report:', error);
