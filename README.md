@@ -35,21 +35,31 @@ An AI-powered civic engagement platform that empowers citizens to report local e
 git clone https://github.com/YOUR_USERNAME/civic-action-platform.git
 cd civic-action-platform
 
-# Install server dependencies
-cd server
-npm install
+# Install dependencies (all-in-one)
+npm run install-all
 
 # Configure environment
 cp .env.example .env
 # Edit .env with your keys
+```
 
-# Start the server
+### Running Locally
+
+#### Option 1: Standard Development (Recommended for local tests)
+```bash
+# In one terminal, start the backend
+cd server
 node index.js
 
-# In a new terminal — install and start the client
+# In a second terminal, start the frontend
 cd client
-npm install
 npm run dev
+```
+
+#### Option 2: Vercel CLI (Simulates production functions)
+```bash
+# Requires Vercel CLI: npm install -g vercel
+vercel dev
 ```
 
 ### Environment Variables (`server/.env`)

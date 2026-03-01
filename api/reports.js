@@ -1,3 +1,4 @@
+require('dotenv').config();
 const connectDB = require('./lib/db');
 const Report = require('./lib/models/Report');
 const aiService = require('../server/services/aiService'); // Reuse existing AI service logic
